@@ -1,160 +1,154 @@
-## 🚀 简介
+## 🚀 Введение
 
-`Naive Ui Admin` 是一款 完全免费 且可商用的中后台解决方案，基于 🌟 `Vue3.x` 🌟、🚀 `Vite` 🚀、✨ [Naive UI](https://www.naiveui.com/) ✨ 和 🎉 `TypeScript` 🎉。
-它融合了最新的前端技术栈，提炼了典型的业务模型和页面，包括二次封装组件、动态菜单、权限校验等功能，助力快速搭建企业级中后台项目
+`Naive Ui Admin` — полностью бесплатное и коммерчески разрешённое решение для админ‑панелей на базе 🌟 `Vue3.x` 🌟, 🚀 `Vite` 🚀, ✨ [Naive UI](https://www.naiveui.com/) ✨ и 🎉 `TypeScript` 🎉. Оно объединяет современный фронтенд‑стек и типовые бизнес‑сценарии: переиспользуемые компоненты, динамические меню, проверку прав и т.д. — чтобы быстрее собирать корпоративные админ‑проекты.
 
-## 🌈 特性
-📦 二次封装的实用高扩展性组件
-🎨 响应式、多主题、多配置，快速集成，开箱即用
-🚀 强大的鉴权系统，支持 三种鉴权模式，满足多样业务需求
-🌐 持续更新的实用性页面模板和交互设计，简化页面构建
+## 🌈 Особенности
+📦 Расширяемые готовые компоненты
+🎨 Адаптивность, темы и конфигурации «из коробки»
+🚀 Сильная система авторизации с 3 режимами
+🌐 Постоянно обновляемые шаблоны страниц и UI
 
-
-## 🎥 预览
+## 🎥 Демо
 - [naive-ui-admin](https://gratis.naiveadmin.com)
 
-账号：admin，密码：123456（随意）
+Логин: admin, пароль: 123456 (любой)
 
+## 🚀 Naive Admin — готовый корпоративный full‑stack фреймворк (коммерческая версия)
 
-## 🚀 Naive Admin - 开箱即用的企业级前后端框架 `商业版本`
-
-> **✨ 多版本选择 · 四年持续迭代**  
-> 配套前后端支持 Java/Php 语言，支持单体和微服务多租户架构  
-> [详情→官网](https://www.naiveadmin.com) | [更新日志](https://www.yuque.com/u5825/zaqu0e)
-
----
-
-## 🔥 为什么选择 NaiveAdmin 商业版？
-- **省时间**：内置丰富扩展组件与业务模板，不写一行样板代码即可开始业务开发
-- **经实战**：已落地电网、跨境 ERP、SaaS 等 30+ 场景 
-- **可扩展**：插件式菜单 / 按钮 / 数据权限，新增业务模块「0 侵入」
+> **✨ Несколько редакций · 4 года развития**  
+> Backend на Java/PHP, поддержка монолита и микросервисной multi‑tenant архитектуры  
+> [Сайт](https://www.naiveadmin.com) | [Обновления](https://www.yuque.com/u5825/zaqu0e)
 
 ---
 
-## 🖥️ 纯前端版本
+## 🔥 Почему выбирают коммерческую версию NaiveAdmin?
+- **Экономия времени**: богатые компоненты и бизнес‑шаблоны, без шаблонного кода
+- **Проверено**: внедрено в энергетике, ERP, SaaS и др. (30+ сценариев)
+- **Расширяемость**: плагинные меню/кнопки/права, новые модули без «врезки»
 
-| 版本 | 技术栈 | 配套后端 | 预览地址 |
+---
+
+## 🖥️ Только фронтенд
+
+| Версия | Технологии | Backend | Демо |
 |-----|-------|---------|-------------|
-| **🆕 Naive UI Max** | Vu3 + Ts + NaiveUI |  否 | [https://max.naiveadmin.com](https://max.naiveadmin.com) |
-| **Naive UI Plus** | Vu3 + Ts + NaiveUI |  支持Java/PHP | [https://plus.naiveadmin.com](https://plus.naiveadmin.com) |
+| **🆕 Naive UI Max** | Vu3 + Ts + NaiveUI |  Нет | [https://max.naiveadmin.com](https://max.naiveadmin.com) |
+| **Naive UI Plus** | Vu3 + Ts + NaiveUI |  Java/PHP | [https://plus.naiveadmin.com](https://plus.naiveadmin.com) |
 
-## 🔌 前后端版本
+## 🔌 Full‑stack
 
-| 版本 | 技术栈     | 预览地址                                          |
+| Версия | Технологии | Демо |
 |------|------------------|--------------------------------------------------------------|
 | **🆕Naive UI Max** | Vu3 + Ts + NaiveUI  |  [https://max-full.naiveadmin.com](https://max-full.naiveadmin.com)    |
 | **Naive UI Plus** | Vu3 + Ts + NaiveUI  |  [https://plus-full.naiveadmin.com](https://plus-full.naiveadmin.com)    |
 
-## 🏢 多租户版本
+## 🏢 Multi‑tenant версии
 
-| 版本           | 技术栈             | 适用场景           | 预览地址                                        |
+| Версия | Технологии | Сценарии | Демо |
 |-----------------------------|-----------------------------|----------------|-------------------------------------------|
-| **Vue3**  | Vu3 + Ts + NaiveUI + Java    | 构建企业级 Saas 化系统 | [https://tenant.naiveadmin.com](https://tenant.naiveadmin.com)   |
-| **React** | React + Ts + Ant + Java  | 构建企业级 Saas 化系统       | [https://compose.warden.vip](https://compose.warden.vip)   |
+| **Vue3**  | Vu3 + Ts + NaiveUI + Java    | Корпоративные SaaS‑системы | [https://tenant.naiveadmin.com](https://tenant.naiveadmin.com)   |
+| **React** | React + Ts + Ant + Java  | Корпоративные SaaS‑системы | [https://compose.warden.vip](https://compose.warden.vip)   |
 
+## 📚 Документация
 
-## 📚 文档
+[Документация open‑source версии](https://docs.naiveadmin.com)
 
-[开源版本文档](https://docs.naiveadmin.com)
+## 🛠 Подготовка
 
-## 🛠 准备
+- [node](http://nodejs.org/) и [git](https://git-scm.com/) — среда разработки
+- [Vite](https://vitejs.dev/) — основы Vite
+- [Vue3](https://v3.vuejs.org/) — основы Vue
+- [TypeScript](https://www.typescriptlang.org/) — базовый синтаксис
+- [Es6+](http://es6.ruanyifeng.com/) — базовый синтаксис
+- [Vue-Router-Next](https://next.router.vuejs.org/) — роутинг
+- [NaiveUi](https://www.naiveui.com/) — базовые компоненты UI
+- [Mock.js](https://github.com/nuysoft/Mock) — основы mockjs
 
-- [node](http://nodejs.org/) 和 [git](https://git-scm.com/) -项目开发环境
-- [Vite](https://vitejs.dev/) - 熟悉 vite 特性
-- [Vue3](https://v3.vuejs.org/) - 熟悉 Vue 基础语法
-- [TypeScript](https://www.typescriptlang.org/) - 熟悉`TypeScript`基本语法
-- [Es6+](http://es6.ruanyifeng.com/) - 熟悉 es6 基本语法
-- [Vue-Router-Next](https://next.router.vuejs.org/) - 熟悉 vue-router 基本使用
-- [NaiveUi](https://www.naiveui.com/) - ui 基本使用
-- [Mock.js](https://github.com/nuysoft/Mock) - mockjs 基本语法
+## 🏗️ Использование
 
-
-## 🏗️ 使用
-
-- 获取项目代码
+- Клонировать репозиторий
 
 ```bash
 git clone https://github.com/jekip/naive-ui-admin.git
 ```
 
-- 安装依赖
+- Установка зависимостей
 
 ```bash
 cd naive-ui-admin
 
 pnpm install
-
 ```
 
-- 运行
+- Запуск
 
 ```bash
 pnpm run dev
 ```
 
-- 打包
+- Сборка
 
 ```bash
 pnpm build
 ```
 
-## 📜 更新日志
+## 📜 Журнал изменений
 
 [CHANGELOG](./CHANGELOG.md)
 
+## 🤝 Вклад в проект
 
-## 🤝 如何贡献
-
-非常欢迎你的加入！[提一个 Issue](https://github.com/jekip/naive-ui-admin/issues) 或者提交一个 `Pull Request`
+Добро пожаловать! [Создайте Issue](https://github.com/jekip/naive-ui-admin/issues) или отправьте `Pull Request`.
 
 **Pull Request:**
 
-1. Fork 代码!
-2. 创建自己的分支: `git checkout -b feat/xxxx`
-3. 提交你的修改: `git commit -am 'feat(function): add xxxxx'`
-4. 推送您的分支: `git push origin feat/xxxx`
-5. 提交`pull request`
+1. Fork репозитория
+2. Создайте ветку: `git checkout -b feat/xxxx`
+3. Закоммитьте изменения: `git commit -am 'feat(function): add xxxxx'`
+4. Отправьте ветку: `git push origin feat/xxxx`
+5. Создайте `pull request`
 
-## 📋 Git 贡献提交规范
+## 📋 Конвенция коммитов
 
-- 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范 ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
+- По [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
 
-  - `feat` 增加新功能
-  - `fix` 修复问题/BUG
-  - `style` 代码风格相关无影响运行结果的
-  - `perf` 优化/性能提升
-  - `refactor` 重构
-  - `revert` 撤销修改
-  - `test` 测试相关
-  - `docs` 文档/注释
-  - `chore` 依赖更新/脚手架配置修改等
-  - `workflow` 工作流改进
-  - `ci` 持续集成
-  - `types` 类型定义文件更改
-  - `wip` 开发中
+  - `feat` новая функциональность
+  - `fix` исправления/баги
+  - `style` форматирование без изменения логики
+  - `perf` оптимизация
+  - `refactor` рефакторинг
+  - `revert` откат
+  - `test` тесты
+  - `docs` документация/комментарии
+  - `chore` обновления зависимостей/скриптов
+  - `workflow` улучшения workflow
+  - `ci` CI
+  - `types` изменения типов
+  - `wip` в работе
 
-## 🌐 浏览器支持
+## 🌐 Поддержка браузеров
 
-本地开发推荐使用`Chrome 80+` 浏览器
+Для локальной разработки рекомендуется `Chrome 80+`.
 
-支持现代浏览器, 不支持 IE
+Поддержка современных браузеров, IE не поддерживается.
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
 | :-: | :-: | :-: | :-: | :-: |
 | not support | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
-## 👥 维护者
+## 👥 Мейнтейнер
 [@Ah jung](https://github.com/jekip)
 
-## 💬 交流
+## 💬 Сообщество
 
-有关 `Naive Ui Admin` 的使用或其他问题，可以加入讨论群交流问题
+Вопросы по `Naive Ui Admin` можно обсудить в группах:
 
-QQ1群：328347666 （已满）
-QQ2群：741353560
+QQ1: 328347666 (полная)
+QQ2: 741353560
 
-## 💖 赞助
-#### 如果项目有帮到你，不妨请作者喝一杯咖啡吧！
+## 💖 Поддержка
+
+#### Если проект полезен — угостите автора кофе!
 
 ![donate](https://assets.naiveadmin.com/assets/images/sponsor.png)
 [Paypal Me](https://www.paypal.com/paypalme/majunping)
