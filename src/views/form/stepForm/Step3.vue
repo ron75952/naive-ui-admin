@@ -1,30 +1,30 @@
 <template>
   <div>
-    <n-result status="success" title="操作成功" description="预计两小时内到账" class="step-result">
+    <n-result status="success" title="Успешно" description="Зачисление до 2 часов" class="step-result">
       <template #default>
         <div class="information">
           <n-grid cols="2 s:2 m:3 l:3 xl:3 2xl:3" responsive="screen" class="my-1">
-            <n-gi>付款账户：</n-gi>
+            <n-gi>Счет списания:</n-gi>
             <n-gi>NaiveUiAdmin@163.com</n-gi>
           </n-grid>
           <n-grid cols="2 s:2 m:3 l:3 xl:3 2xl:3" responsive="screen" class="my-1">
-            <n-gi>收款账户：</n-gi>
+            <n-gi>Счет получателя:</n-gi>
             <n-gi>xiaoma@qq.com</n-gi>
           </n-grid>
           <n-grid cols="2 s:2 m:3 l:3 xl:3 2xl:3" responsive="screen" class="my-1">
-            <n-gi>收款人姓名：</n-gi>
-            <n-gi>啊俊</n-gi>
+            <n-gi>Получатель:</n-gi>
+            <n-gi>Аджун</n-gi>
           </n-grid>
           <n-grid cols="2 s:2 m:3 l:3 xl:3 2xl:3" responsive="screen" class="my-1">
-            <n-gi>转账金额：</n-gi>
-            <n-gi>￥<span class="money">1980</span> 元</n-gi>
+            <n-gi>Сумма:</n-gi>
+            <n-gi>￥<span class="money">1980</span></n-gi>
           </n-grid>
         </div>
       </template>
       <template #footer>
         <div class="flex justify-center">
-          <n-button type="primary" @click="finish" class="mr-4">再转一笔</n-button>
-          <n-button @click="prevStep">查看账单</n-button>
+          <n-button type="primary" @click="finish" class="mr-4">Еще перевод</n-button>
+          <n-button @click="prevStep">Посмотреть счет</n-button>
         </div>
       </template>
     </n-result>

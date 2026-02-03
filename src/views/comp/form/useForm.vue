@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="基础表单"> useForm 表单，用于向用户收集表单信息 </n-card>
+      <n-card :bordered="false" title="Базовая форма">
+        useForm для сбора данных.
+      </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
       <div class="BasicForm">
@@ -23,25 +25,25 @@
     {
       field: 'name',
       component: 'NInput',
-      label: '姓名',
-      labelMessage: '这是一个提示',
+      label: 'Имя',
+      labelMessage: 'Подсказка',
       giProps: {
         span: 1,
       },
       componentProps: {
-        placeholder: '请输入姓名',
+        placeholder: 'Введите имя',
         onInput: (e: any) => {
           console.log(e);
         },
       },
-      rules: [{ required: true, message: '请输入姓名', trigger: ['blur'] }],
+      rules: [{ required: true, message: 'Введите имя', trigger: ['blur'] }],
     },
     {
       field: 'mobile',
       component: 'NInputNumber',
-      label: '手机',
+      label: 'Телефон',
       componentProps: {
-        placeholder: '请输入手机号码',
+        placeholder: 'Введите телефон',
         showButton: false,
         onInput: (e: any) => {
           console.log(e);
@@ -51,19 +53,19 @@
     {
       field: 'type',
       component: 'NSelect',
-      label: '类型',
+      label: 'Тип',
       giProps: {
         //span: 24,
       },
       componentProps: {
-        placeholder: '请选择类型',
+        placeholder: 'Выберите тип',
         options: [
           {
-            label: '舒适性',
+            label: 'Комфорт',
             value: 1,
           },
           {
-            label: '经济性',
+            label: 'Эконом',
             value: 2,
           },
         ],
@@ -75,7 +77,7 @@
     {
       field: 'makeDate',
       component: 'NDatePicker',
-      label: '预约时间',
+      label: 'Дата',
       giProps: {
         //span: 24,
       },
@@ -91,7 +93,7 @@
     {
       field: 'makeTime',
       component: 'NTimePicker',
-      label: '停留时间',
+      label: 'Время',
       giProps: {
         //span: 24,
       },
@@ -105,23 +107,23 @@
     {
       field: 'makeProject',
       component: 'NCheckbox',
-      label: '预约项目',
+      label: 'Услуга',
       giProps: {
         //span: 24,
       },
       componentProps: {
-        placeholder: '请选择预约项目',
+        placeholder: 'Выберите услугу',
         options: [
           {
-            label: '种牙',
+            label: 'Имплант',
             value: 1,
           },
           {
-            label: '补牙',
+            label: 'Пломба',
             value: 2,
           },
           {
-            label: '根管',
+            label: 'Канал',
             value: 3,
           },
         ],
@@ -133,18 +135,18 @@
     {
       field: 'makeSource',
       component: 'NRadioGroup',
-      label: '来源',
+      label: 'Источник',
       giProps: {
         //span: 24,
       },
       componentProps: {
         options: [
           {
-            label: '网上',
+            label: 'Онлайн',
             value: 1,
           },
           {
-            label: '门店',
+            label: 'Магазин',
             value: 2,
           },
         ],
@@ -155,7 +157,7 @@
     },
     {
       field: 'status',
-      label: '状态',
+      label: 'Статус',
       giProps: {
         //span: 24,
       },
@@ -171,13 +173,13 @@
     collapsedRows: 3,
     labelWidth: 120,
     layout: 'horizontal',
-    submitButtonText: '提交预约',
+    submitButtonText: 'Отправить',
     schemas,
   });
 
   function handleSubmit(values: Recordable) {
     if (!values) {
-      return message.error('请填写完整信息');
+      return message.error('Заполните все поля');
     }
     console.log(values);
     message.success(JSON.stringify(values));

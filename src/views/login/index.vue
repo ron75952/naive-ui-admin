@@ -20,8 +20,8 @@
         <div class="view-account-top-desc">{{ websiteConfig.loginDesc }}</div>
       </div>
       <div class="view-account-form">
-        <h2 class="view-account-title">账号登录</h2>
-        <div class="login-welcome">欢迎回来，请登录您的账号</div>
+        <h2 class="view-account-title">Вход</h2>
+        <div class="login-welcome">С возвращением, войдите в аккаунт</div>
         <n-form
           ref="formRef"
           label-placement="left"
@@ -33,7 +33,7 @@
           <n-form-item path="username" class="username-item">
             <n-input 
               v-model:value="formInline.username" 
-              placeholder="请输入用户名"
+              placeholder="Введите логин"
               class="login-input"
             >
               <template #prefix>
@@ -48,7 +48,7 @@
               v-model:value="formInline.password"
               type="password"
               showPasswordOn="click"
-              placeholder="请输入密码"
+              placeholder="Введите пароль"
               class="login-input"
             >
               <template #prefix>
@@ -61,10 +61,10 @@
           <n-form-item class="default-color remember-forgot">
             <div class="flex-between-wrapper">
               <div class="left">
-                <n-checkbox v-model:checked="autoLogin">自动登录</n-checkbox>
+                <n-checkbox v-model:checked="autoLogin">Автовход</n-checkbox>
               </div>
               <div class="right">
-                <a href="javascript:" class="forgot-link">忘记密码</a>
+                <a href="javascript:" class="forgot-link">Забыли пароль</a>
               </div>
             </div>
           </n-form-item>
@@ -77,13 +77,13 @@
               block
               class="login-button"
             >
-              登录
+              Войти
             </n-button>
           </n-form-item>
           <n-form-item class="default-color other-item">
             <div class="flex view-account-other">
               <div class="flex-initial other-text">
-                <span>其它登录方式</span>
+                <span>Другие способы</span>
               </div>
               <div class="social-login">
                 <a href="javascript:" class="social-icon">
@@ -103,7 +103,7 @@
                 </a>
               </div>
               <div class="flex-initial" style="margin-left: auto">
-                <a href="javascript:" class="register-link">注册账号</a>
+                <a href="javascript:" class="register-link">Регистрация</a>
               </div>
             </div>
           </n-form-item>
@@ -127,7 +127,7 @@
   onMounted(() => {
     // 聚焦用户名输入框
     setTimeout(() => {
-      const usernameInput = document.querySelector('input[placeholder="请输入用户名"]');
+      const usernameInput = document.querySelector('input[placeholder="Введите логин"]');
       if (usernameInput) {
         (usernameInput as HTMLElement).focus();
       }
@@ -151,8 +151,8 @@
   });
 
   const rules = {
-    username: { required: true, message: '请输入用户名', trigger: 'blur' },
-    password: { required: true, message: '请输入密码', trigger: 'blur' },
+    username: { required: true, message: 'Введите логин', trigger: 'blur' },
+    password: { required: true, message: 'Введите пароль', trigger: 'blur' },
   };
 
   const userStore = useUserStore();
@@ -165,7 +165,7 @@
     formRef.value.validate(async (errors) => {
       if (!errors) {
         const { username, password } = formInline;
-        message.loading('登录中...');
+        message.loading('Вход...');
         loading.value = true;
 
         const params: FormState = {
@@ -178,18 +178,18 @@
           message.destroyAll();
           if (code == ResultEnum.SUCCESS) {
             const toPath = decodeURIComponent((route.query?.redirect || '/') as string);
-            message.success('登录成功，即将进入系统');
+            message.success('Вход выполнен');
             if (route.name === LOGIN_NAME) {
               router.replace('/');
             } else router.replace(toPath);
           } else {
-            message.info(msg || '登录失败');
+            message.info(msg || 'Ошибка входа');
           }
         } finally {
           loading.value = false;
         }
       } else {
-        message.error('请填写完整信息，并且进行验证码校验');
+        message.error('Заполните все поля и пройдите проверку');
       }
     });
   };

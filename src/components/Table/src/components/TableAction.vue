@@ -18,7 +18,7 @@
         <slot name="more"></slot>
         <n-button v-bind="getMoreProps" class="mx-1" v-if="!$slots.more" icon-placement="right">
           <div class="flex items-center">
-            <span>更多</span>
+            <span>Ещё</span>
             <n-icon size="14" class="ml-1">
               <DownOutlined />
             </n-icon>

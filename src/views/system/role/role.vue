@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="角色权限管理">
-        页面数据为 Mock 示例数据，非真实数据。
+      <n-card :bordered="false" title="Права ролей">
+        Данные страницы — mock, не реальные.
       </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
@@ -21,7 +21,7 @@
                 <PlusOutlined />
               </n-icon>
             </template>
-            新增角色
+            Новая роль
           </n-button>
         </template>
 
@@ -49,13 +49,13 @@
       <template #action>
         <n-space>
           <n-button type="info" ghost icon-placement="left" @click="packHandle">
-            全部{{ expandedKeys.length ? '收起' : '展开' }}
+            Все{{ expandedKeys.length ? ' свернуть' : ' развернуть' }}
           </n-button>
 
           <n-button type="info" ghost icon-placement="left" @click="checkedAllHandle">
-            全部{{ checkedAll ? '取消' : '选择' }}
+            Все{{ checkedAll ? ' снять' : ' выбрать' }}
           </n-button>
-          <n-button type="primary" :loading="formBtnLoading" @click="confirmForm">提交</n-button>
+          <n-button type="primary" :loading="formBtnLoading" @click="confirmForm">Отправить</n-button>
         </n-space>
       </template>
     </n-modal>
@@ -95,7 +95,7 @@
 
   const actionColumn = reactive({
     width: 250,
-    title: '操作',
+    title: 'Действия',
     key: 'action',
     fixed: 'right',
     render(record) {
@@ -103,7 +103,7 @@
         style: 'button',
         actions: [
           {
-            label: '菜单权限',
+            label: 'Права меню',
             onClick: handleMenuAuth.bind(null, record),
             // 根据业务控制是否显示 isShow 和 auth 是并且关系
             ifShow: () => {
@@ -113,7 +113,7 @@
             auth: ['basic_list'],
           },
           {
-            label: '编辑',
+            label: 'Правка',
             onClick: handleEdit.bind(null, record),
             ifShow: () => {
               return true;
@@ -121,7 +121,7 @@
             auth: ['basic_list'],
           },
           {
-            label: '删除',
+            label: 'Удалить',
             onClick: handleDelete.bind(null, record),
             // 根据业务控制是否显示 isShow 和 auth 是并且关系
             ifShow: () => {
@@ -160,25 +160,25 @@
     formBtnLoading.value = true;
     setTimeout(() => {
       showModal.value = false;
-      message.success('提交成功');
+      message.success('Отправлено');
       reloadTable();
       formBtnLoading.value = false;
     }, 200);
   }
 
   function handleEdit(record: Recordable) {
-    console.log('点击了编辑', record);
+    console.log('Нажато редактирование', record);
     // router.push({ name: 'basic-info', params: { id: record.id } });
     editModalRef.value.showModal(record);
   }
 
   function handleDelete(record: Recordable) {
-    console.log('点击了删除', record);
-    message.info('点击了删除');
+    console.log('Нажато удаление', record);
+    message.info('Нажато удаление');
   }
 
   function handleMenuAuth(record: Recordable) {
-    editRoleTitle.value = `分配 ${record.name} 的菜单权限`;
+    editRoleTitle.value = `Назначить права меню: ${record.name}`;
     checkedKeys.value = record.menu_keys;
     showModal.value = true;
   }

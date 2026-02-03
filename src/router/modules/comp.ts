@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Layout,
     redirect: '/comp/table',
     meta: {
-      title: '组件示例',
+      title: 'Примеры компонентов',
       icon: renderIcon(WalletOutlined),
       sort: 8,
     },
@@ -23,14 +23,14 @@ const routes: Array<RouteRecordRaw> = [
         redirect: '/comp/table/basic',
         component: ParentLayout,
         meta: {
-          title: '表格',
+          title: 'Таблицы',
         },
         children: [
           {
             path: 'basic',
             name: `${routeName}_table_basic`,
             meta: {
-              title: '基础表格',
+              title: 'Базовая таблица',
             },
             component: () => import('@/views/comp/table/basic.vue'),
           },
@@ -38,7 +38,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'editCell',
             name: `${routeName}_table_editCell`,
             meta: {
-              title: '单元格编辑',
+              title: 'Редакт. ячейки',
             },
             component: () => import('@/views/comp/table/editCell.vue'),
           },
@@ -46,7 +46,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'editRow',
             name: `${routeName}_table_editRow`,
             meta: {
-              title: '整行编辑',
+              title: 'Редакт. строки',
             },
             component: () => import('@/views/comp/table/editRow.vue'),
           },
@@ -58,14 +58,14 @@ const routes: Array<RouteRecordRaw> = [
         redirect: '/comp/form/basic',
         component: ParentLayout,
         meta: {
-          title: '表单',
+          title: 'Формы',
         },
         children: [
           {
             path: 'basic',
             name: `${routeName}_form_basic`,
             meta: {
-              title: '基础使用',
+              title: 'Базовое',
             },
             component: () => import('@/views/comp/form/basic.vue'),
           },
@@ -83,7 +83,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'upload',
         name: `${routeName}_upload`,
         meta: {
-          title: '上传图片',
+          title: 'Загрузка фото',
         },
         component: () => import('@/views/comp/upload/index.vue'),
       },
@@ -91,7 +91,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'modal',
         name: `${routeName}_modal`,
         meta: {
-          title: '弹窗扩展',
+          title: 'Модальные окна',
         },
         component: () => import('@/views/comp/modal/index.vue'),
       },
@@ -99,7 +99,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'richtext',
         name: `richtext`,
         meta: {
-          title: '富文本',
+          title: 'Rich text',
           extra: renderNew(),
         },
         component: () => import('@/views/comp/richtext/vue-quill.vue'),
@@ -108,7 +108,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'drag',
         name: `Drag`,
         meta: {
-          title: '拖拽',
+          title: 'Перетаскивание',
           extra: renderNew(),
         },
         component: () => import('@/views/comp/drag/index.vue'),

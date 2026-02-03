@@ -101,9 +101,9 @@ export const Alova = createAlova({
       // 需要登录
       if (code === 912) {
         Modal?.warning({
-          title: '提示',
-          content: '登录身份已失效，请重新登录!',
-          okText: '确定',
+          title: 'Внимание',
+          content: 'Сессия истекла, войдите снова.',
+          okText: 'Ок',
           closable: false,
           maskClosable: false,
           onOk: async () => {

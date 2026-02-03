@@ -3,18 +3,18 @@
     <div class="result-box">
       <n-result
         status="info"
-        title="提示"
-        description="本次提交，将在24小时候内自动转入对方账户，如操作失误，请及时撤回"
+        title="Инфо"
+        description="Перевод выполнится в течение 24 часов. При ошибке — отзовите."
       >
         <div class="result-box-extra">
-          <p>您提交的内容如下：</p>
+          <p>Отправленные данные:</p>
           <p class="mt-3">
             <n-space align="center">
               <n-icon size="20" color="#18a058">
                 <CheckCircleOutlined />
               </n-icon>
-              <span>转入支付宝账户（189****5426）：￥1980元</span>
-              <n-button type="info" text>立即撤回</n-button>
+              <span>Перевод на Alipay (189****5426): ￥1980</span>
+              <n-button type="info" text>Отозвать</n-button>
             </n-space>
           </p>
           <p class="mt-3">
@@ -22,17 +22,17 @@
               <n-icon size="20" color="#18a058">
                 <CheckCircleOutlined />
               </n-icon>
-              <span>转入支付宝账户（187****5426）：￥2980元</span>
-              <n-button type="info" text>立即撤回</n-button>
+              <span>Перевод на Alipay (187****5426): ￥2980</span>
+              <n-button type="info" text>Отозвать</n-button>
             </n-space>
           </p>
         </div>
         <template #footer>
           <div class="flex justify-center mb-4">
             <n-space align="center">
-              <n-button type="info" @click="goHome">回到首页</n-button>
-              <n-button>查看详情</n-button>
-              <n-button>全部撤回</n-button>
+              <n-button type="info" @click="goHome">На главную</n-button>
+              <n-button>Детали</n-button>
+              <n-button>Отозвать все</n-button>
             </n-space>
           </div>
         </template>

@@ -94,7 +94,7 @@
               <component :is="fullscreenIcon" @click="toggleFullScreen" />
             </n-icon>
           </template>
-          <span>全屏</span>
+          <span>Полный экран</span>
         </n-tooltip>
       </div>
       <!-- 个人中心 -->
@@ -119,7 +119,7 @@
               <SettingOutlined />
             </n-icon>
           </template>
-          <span>项目配置</span>
+          <span>Настройки</span>
         </n-tooltip>
       </div>
     </div>
@@ -233,13 +233,13 @@
       // 退出登录
       const doLogout = () => {
         dialog.info({
-          title: '提示',
-          content: '您确定要退出登录吗',
-          positiveText: '确定',
-          negativeText: '取消',
+          title: 'Внимание',
+          content: 'Выйти из системы?',
+          positiveText: 'Ок',
+          negativeText: 'Отмена',
           onPositiveClick: () => {
             userStore.logout().then(() => {
-              message.success('成功退出登录');
+              message.success('Вы вышли');
               // 移除标签页
               localStorage.removeItem(TABS_ROUTES);
               router
@@ -279,7 +279,7 @@
       const iconList = [
         {
           icon: 'SearchOutlined',
-          tips: '搜索',
+          tips: 'Поиск',
         },
         {
           icon: 'GithubOutlined',
@@ -290,7 +290,7 @@
         },
         {
           icon: 'LockOutlined',
-          tips: '锁屏',
+          tips: 'Блок',
           eventObject: {
             click: () => useLockscreen.setLock(true),
           },
@@ -298,11 +298,11 @@
       ];
       const avatarOptions = [
         {
-          label: '个人设置',
+          label: 'Профиль',
           key: 1,
         },
         {
-          label: '退出登录',
+          label: 'Выйти',
           key: 2,
         },
       ];

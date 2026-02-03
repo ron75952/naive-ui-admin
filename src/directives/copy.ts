@@ -1,7 +1,7 @@
 /**
  * v-copy
- * 复制某个值至剪贴板
- * 接收参数：string类型/Ref<string>类型/Reactive<string>类型
+ * Копирование значения в буфер обмена
+ * Принимает: string / Ref<string> / Reactive<string>
  */
 import type { Directive, DirectiveBinding } from 'vue';
 
@@ -28,7 +28,7 @@ function handleClick(this: any) {
   input.select();
   document.execCommand('Copy');
   document.body.removeChild(input);
-  console.log('复制成功', this.copyData);
+  console.log('Скопировано', this.copyData);
 }
 
 export default copy;

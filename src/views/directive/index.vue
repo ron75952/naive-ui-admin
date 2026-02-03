@@ -1,19 +1,21 @@
 <template>
   <div class="card content-box">
-    <n-card :bordered="false" title="复制指令">
+    <n-card :bordered="false" title="Копирование">
       <n-space>
-        <n-input placeholder="输入内容试试" v-model:value="data" style="width: 350px" />
-        <n-button v-copy="data" type="primary" @click="a">复 制</n-button>
+        <n-input placeholder="Введите текст" v-model:value="data" style="width: 350px" />
+        <n-button v-copy="data" type="primary" @click="a">Копировать</n-button>
       </n-space>
     </n-card>
-    <n-card :bordered="false" title="防抖指令" class="mt-3">
-      <n-button type="primary" v-debounce="b">防抖测试</n-button>
+    <n-card :bordered="false" title="Debounce" class="mt-3">
+      <n-button type="primary" v-debounce="b">Тест debounce</n-button>
     </n-card>
-    <n-card :bordered="false" title="节流指令" class="mt-3">
-      <n-button type="primary" v-throttle="c">节流测试</n-button>
+    <n-card :bordered="false" title="Throttle" class="mt-3">
+      <n-button type="primary" v-throttle="c">Тест throttle</n-button>
     </n-card>
 
-    <n-card :bordered="false" title="拖拽指令" class="mt-3"> 鼠标放到矩形上面拖拽试试 </n-card>
+    <n-card :bordered="false" title="Drag" class="mt-3">
+      Наведите на квадрат и перетащите
+    </n-card>
     <div class="box" v-draggable> </div>
   </div>
 </template>
@@ -24,14 +26,14 @@
   const data = ref<string>();
   const message = useMessage();
   const a = () => {
-    message.success('复制成功:' + data.value);
+    message.success('Скопировано: ' + data.value);
   };
   const b = () => {
-    message.success('防抖');
+    message.success('Debounce');
     console.log(data.value);
   };
   const c = () => {
-    message.success('节流');
+    message.success('Throttle');
     console.log(data.value);
   };
 </script>

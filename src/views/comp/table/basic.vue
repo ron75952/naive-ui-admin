@@ -1,8 +1,8 @@
 <template>
   <n-card :bordered="false" class="proCard">
     <BasicTable
-      title="表格列表"
-      titleTooltip="这是一个提示"
+      title="Таблица"
+      titleTooltip="Подсказка"
       :columns="columns"
       :request="loadDataTable"
       :row-key="(row) => row.id"
@@ -33,7 +33,7 @@
 
   const actionColumn = reactive({
     width: 180,
-    title: '操作',
+    title: 'Действия',
     key: 'action',
     fixed: 'right',
     align: 'center',
@@ -48,7 +48,7 @@
   function createActions(record) {
     return [
       {
-        label: '删除',
+        label: 'Удалить',
         // 配置 color 会覆盖 type
         icon: DeleteOutlined,
         onClick: handleDelete.bind(null, record),
@@ -56,7 +56,7 @@
         auth: ['basic_list'],
       },
       {
-        label: '编辑',
+        label: 'Правка',
         icon: EditOutlined,
         onClick: handleEdit.bind(null, record),
         auth: ['basic_list'],
@@ -75,12 +75,12 @@
   function handleDelete(record) {
     console.log(record);
     dialog.info({
-      title: '提示',
-      content: `您想删除${record.name}`,
-      positiveText: '确定',
-      negativeText: '取消',
+      title: 'Внимание',
+      content: `Удалить ${record.name}?`,
+      positiveText: 'Ок',
+      negativeText: 'Отмена',
       onPositiveClick: () => {
-        message.success('删除成功');
+        message.success('Удалено');
       },
       onNegativeClick: () => {},
     });
@@ -88,7 +88,7 @@
 
   function handleEdit(record) {
     console.log(record);
-    message.success('您点击了编辑按钮');
+    message.success('Открыто редактирование');
   }
 </script>
 

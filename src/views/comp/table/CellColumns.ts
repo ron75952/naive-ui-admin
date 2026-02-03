@@ -14,15 +14,15 @@ export interface ListData {
 }
 
 const sexMap = {
-  male: '男',
-  female: '女',
-  unknown: '未知',
+  male: 'М',
+  female: 'Ж',
+  unknown: '?',
 };
 
 const statusMap = {
-  close: '已取消',
-  refuse: '已拒绝',
-  pass: '已通过',
+  close: 'Отменено',
+  refuse: 'Отклонено',
+  pass: 'Принято',
 };
 
 export const columns: BasicColumn<ListData>[] = [
@@ -31,7 +31,7 @@ export const columns: BasicColumn<ListData>[] = [
     key: 'id',
   },
   {
-    title: '名称',
+    title: 'Название',
     key: 'name',
     editComponent: 'NInput',
     // 默认必填校验
@@ -39,7 +39,7 @@ export const columns: BasicColumn<ListData>[] = [
     edit: true,
   },
   {
-    title: '头像',
+    title: 'Аватар',
     key: 'avatar',
     render(record) {
       return h(NAvatar, {
@@ -49,7 +49,7 @@ export const columns: BasicColumn<ListData>[] = [
     },
   },
   {
-    title: '性别',
+    title: 'Пол',
     key: 'sex',
     render(record) {
       return h(
@@ -64,22 +64,22 @@ export const columns: BasicColumn<ListData>[] = [
     },
   },
   {
-    title: '邮箱',
+    title: 'Email',
     key: 'email',
     width: 220,
   },
   {
-    title: '城市',
+    title: 'Город',
     key: 'city',
     editComponent: 'NSelect',
     editComponentProps: {
       options: [
         {
-          label: '深圳市',
+          label: 'Шэньчжэнь',
           value: 1,
         },
         {
-          label: '广州市',
+          label: 'Гуанчжоу',
           value: 2,
         },
       ],
@@ -88,7 +88,7 @@ export const columns: BasicColumn<ListData>[] = [
     width: 220,
   },
   {
-    title: '状态',
+    title: 'Статус',
     key: 'status',
     render(record) {
       return h(
@@ -108,7 +108,7 @@ export const columns: BasicColumn<ListData>[] = [
     },
   },
   {
-    title: '创建时间',
+    title: 'Создано',
     key: 'createDate',
   },
 ];
