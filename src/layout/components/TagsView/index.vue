@@ -205,24 +205,24 @@
         const isDisabled = tabsList.value.length <= 1;
         return [
           {
-            label: '刷新当前',
+            label: 'Обновить',
             key: '1',
             icon: renderIcon(ReloadOutlined),
           },
           {
-            label: `关闭当前`,
+            label: `Закрыть`,
             key: '2',
             disabled: isCurrent.value || isDisabled,
             icon: renderIcon(CloseOutlined),
           },
           {
-            label: '关闭其他',
+            label: 'Закрыть другие',
             key: '3',
             disabled: isDisabled,
             icon: renderIcon(ColumnWidthOutlined),
           },
           {
-            label: '关闭全部',
+            label: 'Закрыть все',
             key: '4',
             disabled: isDisabled,
             icon: renderIcon(MinusOutlined),
@@ -308,7 +308,7 @@
       // 关闭当前页面
       const removeTab = (route) => {
         if (tabsList.value.length === 1) {
-          return message.warning('这已经是最后一页，不能再关闭了！');
+          return message.warning('Последняя вкладка');
         }
         delKeepAliveCompName();
         tabsViewStore.closeCurrentTab(route);

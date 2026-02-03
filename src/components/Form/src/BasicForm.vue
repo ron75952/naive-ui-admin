@@ -114,7 +114,7 @@
                 <UpOutlined />
               </n-icon>
             </template>
-            {{ overflow ? '展开' : '收起' }}
+            {{ overflow ? 'Развернуть' : 'Свернуть' }}
           </n-button>
         </n-space>
       </n-gi>

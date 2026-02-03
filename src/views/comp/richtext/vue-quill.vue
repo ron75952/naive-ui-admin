@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="富文本">
-        富文本，用于展示图文信息，比如商品详情，文章详情等...
+      <n-card :bordered="false" title="Rich text">
+        Rich text для описаний товаров, статей и т.д.
       </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
@@ -16,13 +16,13 @@
       />
       <template #footer>
         <n-space>
-          <n-button @click="addText">增加文本</n-button>
-          <n-button @click="addImg">增加图片</n-button>
-          <n-button @click="getHtml">获取HTML</n-button>
+          <n-button @click="addText">Добавить текст</n-button>
+          <n-button @click="addImg">Добавить фото</n-button>
+          <n-button @click="getHtml">Получить HTML</n-button>
         </n-space>
       </template>
     </n-card>
-    <n-card :bordered="false" class="mt-4 proCard" title="HTML 内容">
+    <n-card :bordered="false" class="mt-4 proCard" title="HTML">
       <n-input
         v-model:value="myContentHtml"
         type="textarea"
@@ -42,10 +42,10 @@
   import '@vueup/vue-quill/dist/vue-quill.snow.css';
   const quillEditor = ref();
   const myContent = ref(
-    '<h4>Naive Ui Admin 是一个基于 vue3,vite2,TypeScript 的中后台解决方案</h4>'
+    '<h4>Naive Ui Admin — решение на vue3/vite2/TypeScript для админки</h4>'
   );
   const myContentHtml = ref(
-    '<h4>Naive Ui Admin 是一个基于 vue3,vite2,TypeScript 的中后台解决方案</h4>'
+    '<h4>Naive Ui Admin — решение на vue3/vite2/TypeScript для админки</h4>'
   );
 
   const options = reactive({
@@ -71,11 +71,11 @@
       ],
     },
     theme: 'snow',
-    placeholder: '输入您喜欢的内容吧！',
+    placeholder: 'Введите текст...',
   });
 
   function readyQuill() {
-    console.log('Quill准备好了');
+    console.log('Quill готов');
   }
 
   function getHtml() {
@@ -83,7 +83,7 @@
   }
 
   function addText() {
-    const html = getHtmlVal() + '新增加的内容';
+    const html = getHtmlVal() + 'Новый текст';
     quillEditor.value.setHTML(html);
   }
 

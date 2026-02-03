@@ -12,13 +12,13 @@
             <div class="table-toolbar-inner-popover-title">
               <n-space>
                 <n-checkbox v-model:checked="checkAll" @update:checked="onCheckAll"
-                  >列展示</n-checkbox
+                  >Колонки</n-checkbox
                 >
                 <n-checkbox v-model:checked="selection" @update:checked="onSelection"
-                  >勾选列</n-checkbox
+                  >Выбор</n-checkbox
                 >
                 <n-button text type="info" size="small" class="mt-1" @click="resetColumns"
-                  >重置</n-button
+                  >Сброс</n-button
                 >
               </n-space>
             </div>
@@ -62,7 +62,7 @@
                             <VerticalRightOutlined />
                           </n-icon>
                         </template>
-                        <span>固定到左侧</span>
+                        <span>Закрепить слева</span>
                       </n-tooltip>
                       <n-divider vertical />
                       <n-tooltip trigger="hover" placement="bottom">
@@ -76,7 +76,7 @@
                             <VerticalLeftOutlined />
                           </n-icon>
                         </template>
-                        <span>固定到右侧</span>
+                        <span>Закрепить справа</span>
                       </n-tooltip>
                     </div>
                   </div>
@@ -87,7 +87,7 @@
         </n-popover>
       </div>
     </template>
-    <span>列设置</span>
+    <span>Настройка колонок</span>
   </n-tooltip>
 </template>
 
@@ -149,7 +149,9 @@
         const checkList: any = columns.map((item) => item.key);
         state.checkList = checkList;
         state.defaultCheckList = checkList;
-        const newColumns = columns.filter((item) => item.key != 'action' && item.title != '操作');
+        const newColumns = columns.filter(
+          (item) => item.key != 'action' && item.title != 'Действия'
+        );
         if (!columnsList.value.length) {
           columnsList.value = cloneDeep(newColumns);
           cacheColumnsList.value = cloneDeep(newColumns);

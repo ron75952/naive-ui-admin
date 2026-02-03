@@ -41,7 +41,7 @@
               <n-icon size="18" class="m-auto">
                 <PlusOutlined />
               </n-icon>
-              <span class="upload-title">上传图片</span>
+              <span class="upload-title">Загрузить</span>
             </div>
           </n-upload>
         </div>
@@ -50,7 +50,7 @@
 
     <!--上传图片-->
     <n-space>
-      <n-alert title="提示" type="info" v-if="helpText" class="flex w-full">
+    <n-alert title="Внимание" type="info" v-if="helpText" class="flex w-full">
         {{ helpText }}
       </n-alert>
     </n-space>
@@ -60,7 +60,7 @@
   <n-modal
     v-model:show="showModal"
     preset="card"
-    title="预览"
+    title="Просмотр"
     :bordered="false"
     :style="{ width: '520px' }"
   >
@@ -126,10 +126,10 @@
       //删除
       function remove(index: number) {
         dialog.info({
-          title: '提示',
-          content: '你确定要删除吗？',
-          positiveText: '确定',
-          negativeText: '取消',
+          title: 'Внимание',
+          content: 'Удалить?',
+          positiveText: 'Ок',
+          negativeText: 'Отмена',
           onPositiveClick: () => {
             state.imgList.splice(index, 1);
             state.originalImgList.splice(index, 1);
@@ -158,14 +158,14 @@
 
         // 设置最大值，则判断
         if (maxSize && fileInfo.size / 1024 / 1024 >= maxSize) {
-          message.error(`上传文件最大值不能超过${maxSize}M`);
+          message.error(`Файл не больше ${maxSize}M`);
           return false;
         }
 
         // 设置类型,则判断
         const fileType = componentSetting.upload.fileType;
         if (acceptRef.length > 0 && !checkFileType(fileInfo.type)) {
-          message.error(`只能上传文件类型为${fileType.join(',')}`);
+          message.error(`Типы: ${fileType.join(',')}`);
           return false;
         }
 
@@ -177,7 +177,7 @@
         const res = eval('(' + Event.target.response + ')');
         const infoField = componentSetting.upload.apiSetting.infoField;
         const { code } = res;
-        const message = res.msg || res.message || '上传失败';
+        const message = res.msg || res.message || 'Ошибка загрузки';
         const result = res[infoField];
         //成功
         if (code === ResultEnum.SUCCESS) {

@@ -1,46 +1,46 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="关于">
-        {{ name }} 是一个基于 vue3，vite2，TypeScript
-        的中后台解决方案，它可以帮助你快速搭建企业级中后台项目，相信不管是从新技术使用还是其他方面，都能帮助到你，持续更新中。
+      <n-card :bordered="false" title="О проекте">
+        {{ name }} — решение на vue3/vite2/TypeScript для админки. Помогает быстро
+        собрать проект, обновляется постоянно.
       </n-card>
     </div>
     <n-card
       :bordered="false"
-      title="项目信息"
+      title="Инфо проекта"
       class="mt-4 proCard"
       size="small"
       :segmented="{ content: true }"
     >
       <n-descriptions bordered label-placement="left" class="py-2">
-        <n-descriptions-item label="版本">
+        <n-descriptions-item label="Версия">
           <n-tag type="info"> {{ version }} </n-tag>
         </n-descriptions-item>
-        <n-descriptions-item label="最后编译时间">
+        <n-descriptions-item label="Сборка">
           <n-tag type="info"> {{ lastBuildTime }} </n-tag>
         </n-descriptions-item>
-        <n-descriptions-item label="文档地址">
+        <n-descriptions-item label="Документы">
           <div class="flex items-center">
-            <a href="https://docs.naiveadmin.com" class="py-2" target="_blank">查看文档地址</a>
+            <a href="https://docs.naiveadmin.com" class="py-2" target="_blank">Открыть доки</a>
           </div>
         </n-descriptions-item>
-        <n-descriptions-item label="预览地址">
+        <n-descriptions-item label="Демо">
           <div class="flex items-center">
-            <a href="https://v1.naiveadmin.com" class="py-2" target="_blank">查看预览地址</a>
+            <a href="https://v1.naiveadmin.com" class="py-2" target="_blank">Открыть демо</a>
           </div>
         </n-descriptions-item>
         <n-descriptions-item label="Github">
           <div class="flex items-center">
             <a href="https://github.com/jekip/naive-ui-admin" class="py-2" target="_blank"
-              >查看Github地址</a
+              >GitHub</a
             >
           </div>
         </n-descriptions-item>
-        <n-descriptions-item label="QQ交流群">
+        <n-descriptions-item label="Чат QQ">
           <div class="flex items-center">
             <a href="https://jq.qq.com/?_wv=1027&k=xib9dU4C" class="py-2" target="_blank"
-              >点击链接加入群聊【Naive Admin】</a
+              >Войти в чат Naive Admin</a
             >
           </div>
         </n-descriptions-item>
@@ -49,7 +49,7 @@
 
     <n-card
       :bordered="false"
-      title="开发环境依赖"
+      title="Dev зависимости"
       class="mt-4 proCard"
       size="small"
       :segmented="{ content: true }"
@@ -63,7 +63,7 @@
 
     <n-card
       :bordered="false"
-      title="生产环境依赖"
+      title="Prod зависимости"
       class="mt-4 proCard"
       size="small"
       :segmented="{ content: true }"

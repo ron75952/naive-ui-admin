@@ -1,5 +1,5 @@
 <template>
-  <div>监控台</div>
+  <div>Мониторинг</div>
 </template>
 
 <script lang="ts" setup></script>
