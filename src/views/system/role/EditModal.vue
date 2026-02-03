@@ -15,25 +15,25 @@
     {
       field: 'name',
       component: 'NInput',
-      label: '角色名称',
+      label: 'Роль',
       componentProps: {
-        placeholder: '请输入角色名称',
+        placeholder: 'Введите роль',
       },
-      rules: [{ required: true, message: '请输入角色名称', trigger: ['blur'] }],
+      rules: [{ required: true, message: 'Введите роль', trigger: ['blur'] }],
     },
     {
       field: 'explain',
       component: 'NInput',
-      label: '角色说明',
+      label: 'Описание роли',
       componentProps: {
         type: 'textarea',
-        placeholder: '请输入角色角色说明',
+        placeholder: 'Введите описание',
       },
     },
     {
       field: 'isDefault',
       component: 'NSwitch',
-      label: '默认角色',
+      label: 'Роль по умолчанию',
       componentProps: {},
     },
   ];
@@ -43,14 +43,14 @@
     collapsedRows: 3,
     labelWidth: 80,
     layout: 'horizontal',
-    submitButtonText: '保存',
+    submitButtonText: 'Сохранить',
     showActionButtonGroup: false,
     schemas,
   });
 
   const [modalRegister, { openModal, closeModal, setSubLoading }] = useModal({
-    title: '编辑角色',
-    subBtuText: '保存',
+    title: 'Редактировать роль',
+    subBtuText: 'Сохранить',
   });
 
   function showModal(record: any) {

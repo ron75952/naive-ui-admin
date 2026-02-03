@@ -1,33 +1,32 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="模态框">
-        模态框，用于向用户收集或展示信息，Modal 采用 Dialog 预设，扩展拖拽效果
+      <n-card :bordered="false" title="Модальные окна">
+        Модальное окно для сбора и показа данных. Modal использует пресет Dialog и поддерживает
+        перетаскивание.
         <br />
-        以下是 useModal
-        方式，ref方式，也支持，使用方式和其他组件一致，如：modalRef.value.closeModal()
+        Ниже пример useModal и ref: modalRef.value.closeModal()
       </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
-      <n-alert title="Modal嵌套Form" type="info">
-        使用 useModal 进行弹窗展示和操作，并演示了在Modal内和Form组件，组合使用方法
+      <n-alert title="Modal + Form" type="info">
+        useModal для открытия и работы с Form внутри.
       </n-alert>
       <n-divider />
       <n-space>
-        <n-button type="primary" @click="showModal">打开Modal嵌套Form例子</n-button>
+        <n-button type="primary" @click="showModal">Открыть пример</n-button>
       </n-space>
       <n-divider />
-      <n-alert title="个性化轻量级" type="info">
-        使用 useModal 进行弹窗展示和操作，自定义配置，实现轻量级效果，更多配置，请参考文档
+      <n-alert title="Лёгкий режим" type="info">
+        useModal с кастомной настройкой. Подробности в документации.
       </n-alert>
       <n-divider />
       <n-space>
-        <n-button type="primary" @click="showLightModal">轻量级确认</n-button>
+        <n-button type="primary" @click="showLightModal">Лёгкое подтверждение</n-button>
       </n-space>
       <n-divider />
-      <n-alert title="提示" type="info">
-        组件暴露了，setProps 方法，用于修改组件内部
-        Props，比如标题，等，具体参考UI框架文档，DialogReactive Properties
+      <n-alert title="Внимание" type="info">
+        Метод setProps меняет параметры внутри компонента (например, заголовок).
       </n-alert>
     </n-card>
 
@@ -48,7 +47,7 @@
       @on-ok="lightOkModal"
     >
       <template #default>
-        <p class="text-gray-500" style="padding-left: 35px">一些对话框内容</p>
+        <p class="text-gray-500" style="padding-left: 35px">Текст диалога</p>
       </template>
     </basicModal>
   </div>
@@ -64,25 +63,25 @@
     {
       field: 'name',
       component: 'NInput',
-      label: '姓名',
-      labelMessage: '这是一个提示',
+      label: 'Имя',
+      labelMessage: 'Подсказка',
       giProps: {
         span: 1,
       },
       componentProps: {
-        placeholder: '请输入姓名',
+        placeholder: 'Введите имя',
         onInput: (e: any) => {
           console.log(e);
         },
       },
-      rules: [{ required: true, message: '请输入姓名', trigger: ['blur'] }],
+      rules: [{ required: true, message: 'Введите имя', trigger: ['blur'] }],
     },
     {
       field: 'mobile',
       component: 'NInputNumber',
-      label: '手机',
+      label: 'Телефон',
       componentProps: {
-        placeholder: '请输入手机号码',
+        placeholder: 'Введите телефон',
         showButton: false,
         onInput: (e: any) => {
           console.log(e);
@@ -92,19 +91,19 @@
     {
       field: 'type',
       component: 'NSelect',
-      label: '类型',
+      label: 'Тип',
       giProps: {
         //span: 24,
       },
       componentProps: {
-        placeholder: '请选择类型',
+        placeholder: 'Выберите тип',
         options: [
           {
-            label: '舒适性',
+            label: 'Комфорт',
             value: 1,
           },
           {
-            label: '经济性',
+            label: 'Эконом',
             value: 2,
           },
         ],
@@ -116,7 +115,7 @@
     {
       field: 'makeDate',
       component: 'NDatePicker',
-      label: '预约时间',
+      label: 'Дата',
       giProps: {
         //span: 24,
       },
@@ -132,7 +131,7 @@
     {
       field: 'makeTime',
       component: 'NTimePicker',
-      label: '停留时间',
+      label: 'Время',
       giProps: {
         //span: 24,
       },
@@ -146,23 +145,23 @@
     {
       field: 'makeProject',
       component: 'NCheckbox',
-      label: '预约项目',
+      label: 'Услуга',
       giProps: {
         //span: 24,
       },
       componentProps: {
-        placeholder: '请选择预约项目',
+        placeholder: 'Выберите услугу',
         options: [
           {
-            label: '种牙',
+            label: 'Имплант',
             value: 1,
           },
           {
-            label: '补牙',
+            label: 'Пломба',
             value: 2,
           },
           {
-            label: '根管',
+            label: 'Канал',
             value: 3,
           },
         ],
@@ -174,18 +173,18 @@
     {
       field: 'makeSource',
       component: 'NRadioGroup',
-      label: '来源',
+      label: 'Источник',
       giProps: {
         //span: 24,
       },
       componentProps: {
         options: [
           {
-            label: '网上',
+            label: 'Онлайн',
             value: 1,
           },
           {
-            label: '门店',
+            label: 'Магазин',
             value: 2,
           },
         ],
@@ -196,7 +195,7 @@
     },
     {
       field: 'status',
-      label: '状态',
+      label: 'Статус',
       giProps: {
         //span: 24,
       },
@@ -209,14 +208,14 @@
   const message = useMessage();
 
   const [modalRegister, { openModal, closeModal, setSubLoading }] = useModal({
-    title: '新增预约',
+    title: 'Новая запись',
   });
 
   const [
     lightModalRegister,
     { openModal: lightOpenModal, closeModal: lightCloseModal, setSubLoading: lightSetSubLoading },
   ] = useModal({
-    title: '确认对话框',
+    title: 'Подтверждение',
     showIcon: true,
     type: 'warning',
     closable: false,
@@ -228,7 +227,7 @@
     collapsedRows: 3,
     labelWidth: 120,
     layout: 'horizontal',
-    submitButtonText: '提交预约',
+    submitButtonText: 'Отправить',
     showActionButtonGroup: false,
     schemas,
   });
@@ -238,9 +237,9 @@
     if (formRes) {
       closeModal();
       console.log('formRes', formRes);
-      message.success('提交成功');
+      message.success('Отправлено');
     } else {
-      message.error('验证失败，请填写完整信息');
+      message.error('Ошибка проверки: заполните все');
       setSubLoading(false);
     }
   }

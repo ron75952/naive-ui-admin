@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="工作台">
+      <n-card :bordered="false" title="Рабочая">
         <n-grid cols="2 s:1 m:1 l:2 xl:2 2xl:2" responsive="screen">
           <n-gi>
             <div class="flex items-center">
@@ -9,23 +9,23 @@
                 <n-avatar circle :size="64" :src="schoolboy" />
               </div>
               <div>
-                <p class="px-4 text-xl">早安，Ah jung，开始您一天的工作吧！</p>
-                <p class="px-4 text-gray-400">今日阴转大雨，15℃ - 25℃，出门记得带伞哦。</p>
+                <p class="px-4 text-xl">Доброе утро, Ah jung! Удачного дня.</p>
+                <p class="px-4 text-gray-400">Сегодня дождь, 15–25°C. Возьмите зонт.</p>
               </div>
             </div>
           </n-gi>
           <n-gi>
             <div class="flex justify-end w-full">
               <div class="flex flex-col justify-center flex-1 text-right">
-                <span class="text-secondary">项目数</span>
+                <span class="text-secondary">Проекты</span>
                 <span class="text-2xl">16</span>
               </div>
               <div class="flex flex-col justify-center flex-1 text-right">
-                <span class="text-secondary">待办</span>
+                <span class="text-secondary">Задачи</span>
                 <span class="text-2xl">3/15</span>
               </div>
               <div class="flex flex-col justify-center flex-1 text-right">
-                <span class="text-secondary">消息</span>
+                <span class="text-secondary">Сообщения</span>
                 <span class="text-2xl">35</span>
               </div>
             </div>
@@ -40,7 +40,7 @@
           content-style="padding: 0;"
           :bordered="false"
           size="small"
-          title="项目"
+          title="Проекты"
         >
           <div class="flex flex-wrap project-card">
             <n-card
@@ -57,9 +57,9 @@
                 <span class="ml-4 text-lg">Github</span>
               </div>
               <div class="flex h-10 mt-2 text-gray-400">
-                是一个面向开源及私有软件项目的托管平台。
+                Платформа для open-source и приватных проектов.
               </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 开源君，2021-07-04 </div>
+              <div class="flex h-10 mt-2 text-gray-400"> OpenSource, 2021-07-04 </div>
             </n-card>
             <n-card
               size="small"
@@ -74,8 +74,8 @@
                 </span>
                 <span class="ml-4 text-lg">Vue</span>
               </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 渐进式 JavaScript 框架 </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 学不动也要学，2021-07-04 </div>
+              <div class="flex h-10 mt-2 text-gray-400"> Прогрессивный JS‑фреймворк </div>
+              <div class="flex h-10 mt-2 text-gray-400"> Учиться надо, 2021-07-04 </div>
             </n-card>
             <n-card
               size="small"
@@ -90,8 +90,8 @@
                 </span>
                 <span class="ml-4 text-lg">Html5</span>
               </div>
-              <div class="flex h-10 mt-2 text-gray-400"> HTML5是互联网的下一代标准。 </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 撸码也是一种艺术 2021-04-01 </div>
+              <div class="flex h-10 mt-2 text-gray-400"> HTML5 — новый стандарт интернета. </div>
+              <div class="flex h-10 mt-2 text-gray-400"> Код — это искусство, 2021-04-01 </div>
             </n-card>
             <n-card
               size="small"
@@ -106,8 +106,8 @@
                 </span>
                 <span class="ml-4 text-lg">Angular</span>
               </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 现代 Web 开发平台，百万粉丝热捧。 </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 铁粉君 2021-07-04。 </div>
+              <div class="flex h-10 mt-2 text-gray-400"> Современная web‑платформа. </div>
+              <div class="flex h-10 mt-2 text-gray-400"> Фанат, 2021-07-04 </div>
             </n-card>
             <n-card
               size="small"
@@ -122,8 +122,8 @@
                 </span>
                 <span class="ml-4 text-lg">React</span>
               </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 用于构建用户界面的 JavaScript 库。 </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 技术牛 2021-07-04。 </div>
+              <div class="flex h-10 mt-2 text-gray-400"> JS библиотека для UI. </div>
+              <div class="flex h-10 mt-2 text-gray-400"> Tech, 2021-07-04 </div>
             </n-card>
             <n-card
               size="small"
@@ -138,8 +138,8 @@
                 </span>
                 <span class="ml-4 text-lg">Js</span>
               </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 路是走出来的，而不是空想出来的。 </div>
-              <div class="flex h-10 mt-2 text-gray-400"> 架构组 2021-07-04 </div>
+              <div class="flex h-10 mt-2 text-gray-400"> Путь создается делом. </div>
+              <div class="flex h-10 mt-2 text-gray-400"> Архитекторы, 2021-07-04 </div>
             </n-card>
           </div>
         </n-card>
@@ -149,16 +149,16 @@
           content-style="padding-top: 0;padding-bottom: 0;"
           :bordered="false"
           size="small"
-          title="动态"
+          title="Активность"
           class="mt-4"
         >
-          <template #header-extra><a href="javascript:;">更多</a></template>
+          <template #header-extra><a href="javascript:;">Ещё</a></template>
           <n-list>
             <n-list-item>
               <template #prefix>
                 <n-avatar circle :size="40" :src="schoolboy" />
               </template>
-              <n-thing title="Ah Jung 刚才把工作台页面随便写了一些，凑合能看了！">
+              <n-thing title="Ah Jung немного допилил рабочую — теперь ок!">
                 <template #description
                   ><p class="text-xs text-gray-500">2021-07-04 22:37:16</p></template
                 >
@@ -168,7 +168,7 @@
               <template #prefix>
                 <n-avatar circle :size="40" :src="schoolboy" />
               </template>
-              <n-thing title="Ah Jung 在 开源组 创建了项目 naive-ui-admin？">
+              <n-thing title="Ah Jung создал проект naive-ui-admin в open-source группе?">
                 <template #description
                   ><p class="text-xs text-gray-500">2021-07-04 09:37:16</p></template
                 >
@@ -178,7 +178,7 @@
               <template #prefix>
                 <n-avatar circle :size="40" :src="schoolboy" />
               </template>
-              <n-thing title="@It界风清扬，向naive-ui-admin提交了一个bug，抽时间看看吧！">
+              <n-thing title="@IT Feng Qingyang отправил bug для naive-ui-admin — посмотрите.">
                 <template #description
                   ><p class="text-xs text-gray-500">2021-07-04 22:37:16</p></template
                 >
@@ -188,7 +188,7 @@
               <template #prefix>
                 <n-avatar circle :size="40" :src="schoolboy" />
               </template>
-              <n-thing title="技术部那几位童鞋，再次警告，不要摸鱼，不要摸鱼，不要摸鱼啦！">
+              <n-thing title="Команда, не отвлекаемся, не отвлекаемся!">
                 <template #description
                   ><p class="text-xs text-gray-500">2021-07-04 09:37:16</p></template
                 >
@@ -198,7 +198,7 @@
               <template #prefix>
                 <n-avatar circle :size="40" :src="schoolboy" />
               </template>
-              <n-thing title="上班不摸鱼，和咸鱼有什么区别（这话真不是我说的哈）！">
+              <n-thing title="Не отвлекаться — иначе как «ленивый»?">
                 <template #description
                   ><p class="text-xs text-gray-500">2021-07-04 20:37:16</p></template
                 >
@@ -208,10 +208,10 @@
               <template #prefix>
                 <n-avatar circle :size="40" :src="schoolboy" />
               </template>
-              <n-thing title="页面切换其实也支持缓存，只是加了过度效果，看起来像是重新渲染了">
+              <n-thing title="Переключение страниц кешируется, но выглядит как перерендер.">
                 <template #description>
                   <p class="text-gray-400">
-                    <n-input type="text" placeholder="不信，输点文字试试" />
+                    <n-input type="text" placeholder="Не верите? Введите текст" />
                   </p>
                 </template>
               </n-thing>
@@ -225,7 +225,7 @@
           content-style="padding: 0;"
           :bordered="false"
           size="small"
-          title="快捷操作"
+          title="Быстрые действия"
         >
           <div class="flex flex-wrap project-card">
             <n-card size="small" class="cursor-pointer project-card-item" hoverable>
@@ -235,7 +235,7 @@
                     <DashboardOutlined />
                   </n-icon>
                 </span>
-                <span class="text-center text-lx">主控台</span>
+                <span class="text-center text-lx">Панель</span>
               </div>
             </n-card>
             <n-card size="small" class="cursor-pointer project-card-item" hoverable>
@@ -245,7 +245,7 @@
                     <ProfileOutlined />
                   </n-icon>
                 </span>
-                <span class="text-center text-lx">列表</span>
+                <span class="text-center text-lx">Список</span>
               </div>
             </n-card>
             <n-card size="small" class="cursor-pointer project-card-item" hoverable>
@@ -255,7 +255,7 @@
                     <FileProtectOutlined />
                   </n-icon>
                 </span>
-                <span class="text-center text-lx">表单</span>
+                <span class="text-center text-lx">Формы</span>
               </div>
             </n-card>
             <n-card size="small" class="cursor-pointer project-card-item" hoverable>
@@ -265,7 +265,7 @@
                     <ApartmentOutlined />
                   </n-icon>
                 </span>
-                <span class="text-center text-lx">权限管理</span>
+                <span class="text-center text-lx">Права</span>
               </div>
             </n-card>
             <n-card size="small" class="cursor-pointer project-card-item" hoverable>
@@ -275,7 +275,7 @@
                     <SettingOutlined />
                   </n-icon>
                 </span>
-                <span class="text-center text-lx">系统管理</span>
+                <span class="text-center text-lx">Система</span>
               </div>
             </n-card>
             <n-card size="small" class="cursor-pointer project-card-item" hoverable>
@@ -285,7 +285,7 @@
                     <DashboardOutlined />
                   </n-icon>
                 </span>
-                <span class="text-center text-lx">主控台</span>
+                <span class="text-center text-lx">Панель</span>
               </div>
             </n-card>
           </div>

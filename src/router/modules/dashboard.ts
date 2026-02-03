@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'console',
         name: `${routeName}_console`,
         meta: {
-          title: '主控台',
+          title: 'Панель',
           permissions: ['dashboard_console'],
           affix: true,
         },
@@ -41,7 +41,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'workplace',
         name: `${routeName}_workplace`,
         meta: {
-          title: '工作台',
+          title: 'Рабочая',
           keepAlive: true,
           permissions: ['dashboard_workplace'],
         },

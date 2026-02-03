@@ -5,7 +5,7 @@ export const basicProps = {
   // 确认按钮文字
   subBtuText: {
     type: String,
-    default: '确认',
+    default: 'Ок',
   },
   showIcon: {
     type: Boolean,

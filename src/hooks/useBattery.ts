@@ -30,7 +30,7 @@ export const useBattery = () => {
   const calcDischargingTime = computed(() => {
     const hour = state.battery.dischargingTime / 3600;
     const minute = (state.battery.dischargingTime / 60) % 60;
-    return `${~~hour}小时${~~minute}分钟`;
+    return `${~~hour}ч ${~~minute}мин`;
   });
 
   // 计算电池充满剩余时间
@@ -38,17 +38,17 @@ export const useBattery = () => {
     console.log(state.battery);
     const hour = state.battery.chargingTime / 3600;
     const minute = (state.battery.chargingTime / 60) % 60;
-    return `${~~hour}小时${~~minute}分钟`;
+    return `${~~hour}ч ${~~minute}мин`;
   });
 
   // 电池状态
   const batteryStatus = computed(() => {
     if (state.battery.charging && state.battery.level >= 100) {
-      return '已充满';
+      return 'Заряжено';
     } else if (state.battery.charging) {
-      return '充电中';
+      return 'Заряжается';
     } else {
-      return '已断开电源';
+      return 'Отключено';
     }
   });
 

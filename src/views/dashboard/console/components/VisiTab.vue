@@ -4,10 +4,10 @@
       <NCol :span="24">
         <n-card content-style="padding: 0;" :bordered="false">
           <n-tabs type="line" size="large" :tabs-padding="20" pane-style="padding: 20px;">
-            <n-tab-pane name="流量趋势">
+            <n-tab-pane name="Тренд трафика">
               <FluxTrend />
             </n-tab-pane>
-            <n-tab-pane name="访问量">
+            <n-tab-pane name="Визиты">
               <VisitAmount />
             </n-tab-pane>
           </n-tabs>

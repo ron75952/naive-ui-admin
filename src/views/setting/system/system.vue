@@ -33,25 +33,25 @@
 
   const typeTabList = [
     {
-      name: '基本设置',
-      desc: '系统常规设置',
+      name: 'Базовые',
+      desc: 'Общие настройки',
       key: 1,
     },
     {
-      name: '显示设置',
-      desc: '系统显示设置',
+      name: 'Отображение',
+      desc: 'Настройки вида',
       key: 2,
     },
     {
-      name: '邮件设置',
-      desc: '系统邮件设置',
+      name: 'Почта',
+      desc: 'Настройки почты',
       key: 3,
     },
   ];
 
   const state = reactive({
     type: 1,
-    typeTitle: '基本设置',
+    typeTitle: 'Базовые',
   });
 
   function switchType(e) {

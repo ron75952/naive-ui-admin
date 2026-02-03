@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="上传图片"> 上传图片，用于向用户收集图片信息 </n-card>
+      <n-card :bordered="false" title="Загрузка фото">
+        Загрузка фото для сбора данных.
+      </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
       <n-grid cols="2 s:1 m:3 l:3 xl:3 2xl:3" responsive="screen">
@@ -14,14 +16,14 @@
             ref="formRef"
             class="py-8"
           >
-            <n-form-item label="预约姓名" path="name">
-              <n-input v-model:value="formValue.name" placeholder="输入姓名" />
+            <n-form-item label="Имя" path="name">
+              <n-input v-model:value="formValue.name" placeholder="Введите имя" />
             </n-form-item>
-            <n-form-item label="预约号码" path="mobile">
-              <n-input placeholder="电话号码" v-model:value="formValue.mobile" />
+            <n-form-item label="Телефон" path="mobile">
+              <n-input placeholder="Телефон" v-model:value="formValue.mobile" />
             </n-form-item>
 
-            <n-form-item label="病例图片" path="images">
+            <n-form-item label="Фото случая" path="images">
               <BasicUpload
                 :action="`${uploadUrl}/v1.0/files`"
                 :headers="uploadHeaders"
@@ -31,13 +33,13 @@
                 :height="100"
                 @upload-change="uploadChange"
                 v-model:value="formValue.images"
-                helpText="单个文件不超过2MB，最多只能上传10个文件"
+                helpText="Файл до 2MB, максимум 10 файлов"
               />
             </n-form-item>
             <div style="margin-left: 80px">
               <n-space>
-                <n-button type="primary" @click="formSubmit">提交预约</n-button>
-                <n-button @click="resetForm">重置</n-button>
+                <n-button type="primary" @click="formSubmit">Отправить</n-button>
+                <n-button @click="resetForm">Сброс</n-button>
               </n-space>
             </div>
           </n-form>
@@ -58,18 +60,18 @@
   const rules = {
     name: {
       required: true,
-      message: '请输入预约姓名',
+      message: 'Введите имя',
       trigger: 'blur',
     },
     remark: {
       required: true,
-      message: '请输入预约备注',
+      message: 'Введите комментарий',
       trigger: 'blur',
     },
     images: {
       required: true,
       type: 'array',
-      message: '请上传病例图片',
+      message: 'Загрузите фото',
       trigger: 'change',
     },
   };
@@ -94,9 +96,9 @@
   function formSubmit() {
     formRef.value.validate((errors) => {
       if (!errors) {
-        message.success('验证成功');
+        message.success('Проверка OK');
       } else {
-        message.error('验证失败，请填写完整信息');
+        message.error('Ошибка проверки: заполните все');
       }
     });
   }

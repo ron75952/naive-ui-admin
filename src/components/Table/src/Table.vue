@@ -29,7 +29,7 @@
             <n-switch v-model:value="isStriped" @update:value="setStriped" />
           </div>
         </template>
-        <span>表格斑马纹</span>
+        <span>Зебра</span>
       </n-tooltip>
       <n-divider vertical />
 
@@ -42,7 +42,7 @@
             </n-icon>
           </div>
         </template>
-        <span>刷新</span>
+        <span>Обновить</span>
       </n-tooltip>
 
       <!--密度-->
@@ -61,7 +61,7 @@
             </n-dropdown>
           </div>
         </template>
-        <span>密度</span>
+        <span>Плотность</span>
       </n-tooltip>
 
       <!--表格设置单独抽离成组件-->
@@ -107,17 +107,17 @@
   const densityOptions = [
     {
       type: 'menu',
-      label: '紧凑',
+      label: 'Плотно',
       key: 'small',
     },
     {
       type: 'menu',
-      label: '默认',
+      label: 'По умолч.',
       key: 'medium',
     },
     {
       type: 'menu',
-      label: '宽松',
+      label: 'Свободно',
       key: 'large',
     },
   ];

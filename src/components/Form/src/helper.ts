@@ -4,13 +4,13 @@ import { ComponentType } from './types/index';
  * @description: 生成placeholder
  */
 export function createPlaceholderMessage(component: ComponentType) {
-  if (component === 'NInput') return '请输入';
+  if (component === 'NInput') return 'Введите';
   if (
     ['NPicker', 'NSelect', 'NCheckbox', 'NRadio', 'NSwitch', 'NDatePicker', 'NTimePicker'].includes(
       component
     )
   )
-    return '请选择';
+    return 'Выберите';
   return '';
 }
 
